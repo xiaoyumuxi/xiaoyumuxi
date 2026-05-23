@@ -1,42 +1,59 @@
-## 联系我
+<div align="center">
 
-- GitHub: [@xiaoyumuxi](https://github.com/xiaoyumuxi)
-- Blog: [CSDN · fancyfor](https://blog.csdn.net/fancyfor)
-- Email: 23722032@bjtu.edu.cn
+### 计算机科学与技术专业 · 后端开发方向 · AI 应用开发实践者
 
-> 计算机科学与技术专业学生 · 后端开发学习者 · AI 应用开发实践者
+<p>
+  <a href="https://github.com/xiaoyumuxi">
+    <img src="https://img.shields.io/badge/GitHub-xiaoyumuxi-181717?style=for-the-badge&logo=github" />
+  </a>
+  <a href="https://blog.csdn.net/fancyfor">
+    <img src="https://img.shields.io/badge/CSDN-fancyfor-FC5531?style=for-the-badge&logo=csdn&logoColor=white" />
+  </a>
+  <a href="mailto:23722032@bjtu.edu.cn">
+    <img src="https://img.shields.io/badge/Email-23722032%40bjtu.edu.cn-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+</p>
 
-目前就读于 **北京交通大学**，专业是 **计算机科学与技术**。  
-主要方向是 **后端开发** 和 **AI 应用开发**，关注如何构建稳定、清晰、可维护，并且能真正解决问题的应用系统。
+</div>
 
 ---
 
 ## 关于我
 
-- 🎓 计算机科学与技术专业学生
-- 💻 主要方向：**后端开发 / AI 应用开发**
-- 🧠 正在学习：**Go、Java、Python、PostgreSQL、Redis、Docker**
-- 🤖 关注方向：**LLM 应用、AI Agent、RAG、AI 编程工作流**
-- 🛠️ 熟悉并尝试使用 **Claude Code、Cursor、Codex 等 AI 编程 Agent** 辅助开发
+我目前就读于 **北京交通大学**，专业是 **计算机科学与技术**。
+
+主要方向是 **后端开发** 和 **AI 应用开发**，关注如何构建稳定、清晰、可维护，并且能真正解决问题的应用系统。
+
+- 💻 主要技术方向：Java 后端、AI 应用开发
+- 🧠 关注领域：Spring Boot、Redis、PostgreSQL、MySQL、Netty、RAG、AI Agent
+- 🤖 正在使用 Claude Code、Cursor、Codex 等 AI 编程 Agent 辅助开发
 - 🌱 希望参与开源项目，在真实项目中提升工程能力
-- 🚀 目标是成为一名工程能力扎实的后端 / AI 应用开发工程师
 
 ---
 
 ## 技术栈
 
-### 编程语言
+### 语言
 
-![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 
 ### 后端开发
 
-![Gin](https://img.shields.io/badge/Gin-00ADD8?style=for-the-badge&logo=go&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![Spring AI](https://img.shields.io/badge/Spring%20AI-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Gin](https://img.shields.io/badge/Gin-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![Netty](https://img.shields.io/badge/Netty-111827?style=for-the-badge&logo=apache&logoColor=white)
+
+### 数据库与中间件
+
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![pgvector](https://img.shields.io/badge/pgvector-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DD0031?style=for-the-badge&logo=redis&logoColor=white)
+![Redisson](https://img.shields.io/badge/Redisson-B91C1C?style=for-the-badge&logo=redis&logoColor=white)
 
 ### 工程工具
 
@@ -58,3 +75,5 @@
 ![Codex](https://img.shields.io/badge/Codex-10A37F?style=for-the-badge&logo=openai&logoColor=white)
 
 ---
+
+<div align="center"> <img src="./metrics.plugin.calendar.full.svg" /> </div>
