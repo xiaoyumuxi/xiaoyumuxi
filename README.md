@@ -1,6 +1,6 @@
 <div align="center">
 
-### 计算机科学与技术专业 · 后端开发方向 · AI 应用开发实践者
+### 计算机科学与技术专业 · 后端开发方向 + AI 应用开发
 
 <p>
   <a href="https://github.com/xiaoyumuxi">
@@ -43,17 +43,11 @@
 ### 后端开发
 
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
-![Spring AI](https://img.shields.io/badge/Spring%20AI-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
 ![Gin](https://img.shields.io/badge/Gin-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![Netty](https://img.shields.io/badge/Netty-111827?style=for-the-badge&logo=apache&logoColor=white)
-
-### 数据库与中间件
-
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![pgvector](https://img.shields.io/badge/pgvector-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DD0031?style=for-the-badge&logo=redis&logoColor=white)
-![Redisson](https://img.shields.io/badge/Redisson-B91C1C?style=for-the-badge&logo=redis&logoColor=white)
+
 
 ### 工程工具
 
@@ -61,19 +55,17 @@
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
-### AI 应用开发
+### AI
 
 ![LLM](https://img.shields.io/badge/LLM-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![RAG](https://img.shields.io/badge/RAG-005571?style=for-the-badge&logo=readthedocs&logoColor=white)
-![AI Agent](https://img.shields.io/badge/AI%20Agent-111827?style=for-the-badge&logo=robotframework&logoColor=white)
-![Prompt Engineering](https://img.shields.io/badge/Prompt%20Engineering-7C3AED?style=for-the-badge&logo=googlegemini&logoColor=white)
-
-### AI 编程工具
-
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-D97706?style=for-the-badge&logo=anthropic&logoColor=white)
-![Cursor](https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white)
 ![Codex](https://img.shields.io/badge/Codex-10A37F?style=for-the-badge&logo=openai&logoColor=white)
 
 ---
 
-<div align="center"> <img src="./metrics.plugin.calendar.full.svg" /> </div>
+<div align="center">
+
+<img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=xiaoyumuxi&theme=tokyo-night&hide_border=true&area=true" />
+
+</div>
