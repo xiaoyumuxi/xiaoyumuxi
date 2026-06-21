@@ -1,71 +1,53 @@
 <div align="center">
 
-### 计算机科学与技术专业 · 后端开发方向 + AI 应用开发
+## Hi, I'm xiaoyumuxi 👋
+
+**北京交通大学 · 计算机科学与技术**
+
+Backend Development · AI Application Development · Open Source Learning
 
 <p>
-  <a href="https://github.com/xiaoyumuxi">
-    <img src="https://img.shields.io/badge/GitHub-xiaoyumuxi-181717?style=for-the-badge&logo=github" />
-  </a>
-  <a href="https://blog.csdn.net/fancyfor">
-    <img src="https://img.shields.io/badge/CSDN-fancyfor-FC5531?style=for-the-badge&logo=csdn&logoColor=white" />
-  </a>
-  <a href="mailto:23722032@bjtu.edu.cn">
-    <img src="https://img.shields.io/badge/Email-23722032%40bjtu.edu.cn-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
+  <a href="https://github.com/xiaoyumuxi"><img src="https://img.shields.io/badge/GitHub-xiaoyumuxi-181717?style=flat&logo=github" alt="GitHub" /></a>
+  <a href="https://blog.csdn.net/fancyfor"><img src="https://img.shields.io/badge/CSDN-fancyfor-FC5531?style=flat&logo=csdn&logoColor=white" alt="CSDN" /></a>
+  <a href="mailto:23722032@bjtu.edu.cn"><img src="https://img.shields.io/badge/Email-23722032%40bjtu.edu.cn-D14836?style=flat&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
 </div>
 
 ---
 
-## 关于我
+## 👋 关于我
 
-我目前就读于 **北京交通大学**，专业是 **计算机科学与技术**。
+- 🎓 计算机科学与技术专业，当前就读于 **北京交通大学**
+- 💻 主要方向：**Java 后端开发**、后端工程实践、AI 应用开发
+- 🧠 关注技术：Spring Boot、Netty、Redis、MySQL、PostgreSQL
+- 🤖 使用 Claude Code、Cursor、Codex 等 AI 编程工具辅助开发
+- 🌱 希望参与开源项目，在真实工程中提升系统设计与协作能力
 
-主要方向是 **后端开发** 和 **AI 应用开发**，关注如何构建稳定、清晰、可维护，并且能真正解决问题的应用系统。
+## 🛠 技术栈
 
-- 💻 主要技术方向：Java 后端、AI 应用开发
-- 🧠 关注领域：Spring Boot、Redis、PostgreSQL、MySQL、Netty、RAG、AI Agent
-- 🤖 正在使用 Claude Code、Cursor、Codex 等 AI 编程 Agent 辅助开发
-- 🌱 希望参与开源项目，在真实项目中提升工程能力
+<p align="center">
+  <img height="20" src="https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white" alt="Java" />
+  <img height="20" src="https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white" alt="Go" />
+  <img height="20" src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python" />
+  <img height="20" src="https://img.shields.io/badge/SQL-336791?style=flat&logo=postgresql&logoColor=white" alt="SQL" />
+  <img height="20" src="https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat&logo=springboot&logoColor=white" alt="Spring Boot" />
+  <img height="20" src="https://img.shields.io/badge/Netty-0F172A?style=flat&logo=apache&logoColor=white" alt="Netty" />
+  <img height="20" src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white" alt="MySQL" />
+  <img height="20" src="https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img height="20" src="https://img.shields.io/badge/Redis-DD0031?style=flat&logo=redis&logoColor=white" alt="Redis" />
+  <img height="20" src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker" />
+  <img height="20" src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white" alt="Git" />
+  <img height="20" src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black" alt="Linux" />
+  <img height="20" src="https://img.shields.io/badge/LLM-412991?style=flat&logo=openai&logoColor=white" alt="LLM" />
+  <img height="20" src="https://img.shields.io/badge/Claude%20Code-D97706?style=flat&logo=anthropic&logoColor=white" alt="Claude Code" />
+</p>
 
----
-
-## 技术栈
-
-### 语言
-
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-
-### 后端开发
-
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
-![Gin](https://img.shields.io/badge/Gin-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DD0031?style=for-the-badge&logo=redis&logoColor=white)
-
-
-### 工程工具
-
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-
-### AI
-
-![LLM](https://img.shields.io/badge/LLM-412991?style=for-the-badge&logo=openai&logoColor=white)
-![RAG](https://img.shields.io/badge/RAG-005571?style=for-the-badge&logo=readthedocs&logoColor=white)
-![Claude Code](https://img.shields.io/badge/Claude%20Code-D97706?style=for-the-badge&logo=anthropic&logoColor=white)
-![Codex](https://img.shields.io/badge/Codex-10A37F?style=for-the-badge&logo=openai&logoColor=white)
-
----
+## 📊 GitHub
 
 <div align="center">
 
-<img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=xiaoyumuxi&theme=tokyo-night&hide_border=true&area=true" />
+<img height="155" src="https://github-readme-stats.vercel.app/api?username=xiaoyumuxi&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" alt="GitHub stats" />
+<img height="155" src="https://github-readme-stats.vercel.app/api/top-langs/?username=xiaoyumuxi&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&custom_title=Own%20Repositories%20Languages&exclude_repo=cc-switch,first-contributions,interview-guide,WeFlow,Thaw,wechat-mac-reader,NotionNext,chatlog_alpha,FirstContributions,30dayMakeOS,claude-code-source-code" alt="Own repositories languages" />
 
 </div>
