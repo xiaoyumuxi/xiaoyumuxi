@@ -41,9 +41,5 @@
 
 ## 📊 GitHub
 
-<div align="center">
-
-<img height="155" src="https://github-readme-stats.vercel.app/api?username=xiaoyumuxi&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=false" alt="GitHub stats" />
-<img height="155" src="https://github-readme-stats.vercel.app/api/top-langs/?username=xiaoyumuxi&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&custom_title=Own%20Repositories%20Languages&exclude_repo=cc-switch,first-contributions,interview-guide,WeFlow,Thaw,wechat-mac-reader,NotionNext,chatlog_alpha,FirstContributions,30dayMakeOS,claude-code-source-code" alt="Own repositories languages" />
-
-</div>
+<img height="155" src="./profile/stats.svg" alt="GitHub stats" />
+<img height="155" src="./profile/top-langs.svg" alt="Top languages" />
