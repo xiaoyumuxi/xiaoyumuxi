@@ -5,6 +5,7 @@ import json
 import os
 from pathlib import Path
 from urllib.error import HTTPError, URLError
+from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from xml.sax.saxutils import escape
 
@@ -63,6 +64,12 @@ def github_get(path, token=None):
         raise RuntimeError(f"Could not reach GitHub API for {path}: {error.reason}") from error
 
 
+def github_search_count(query, token=None):
+    params = urlencode({"q": query, "per_page": 1})
+    result = github_get(f"/search/issues?{params}", token)
+    return result["total_count"]
+
+
 def collect_profile(username, token=None):
     user = github_get(f"/users/{username}", token)
     repos = github_get(f"/users/{username}/repos?type=owner&sort=updated&per_page=100", token)
@@ -75,13 +82,19 @@ def collect_profile(username, token=None):
         for language, size in repo_languages.items():
             languages[language] = languages.get(language, 0) + size
 
+    pull_requests_opened = github_search_count(f"is:pr author:{username}", token)
+    pull_requests_merged = github_search_count(f"is:pr author:{username} is:merged", token)
+    pull_requests_reviewed = github_search_count(f"is:pr reviewed-by:{username} -author:{username}", token)
+
     return {
         "name": user.get("name") or username,
         "username": username,
         "public_repos": user["public_repos"],
         "followers": user["followers"],
         "stars": sum(repo["stargazers_count"] for repo in owned_repos),
-        "forks": sum(repo["forks_count"] for repo in owned_repos),
+        "pull_requests_opened": pull_requests_opened,
+        "pull_requests_merged": pull_requests_merged,
+        "pull_requests_reviewed": pull_requests_reviewed,
         "since": user["created_at"][:4],
         "languages": languages,
     }
@@ -120,18 +133,20 @@ def render_stats(profile):
     stats = [
         ("REPOSITORIES", profile["public_repos"]),
         ("STARS EARNED", profile["stars"]),
-        ("FORKS", profile["forks"]),
+        ("PRS OPENED", profile["pull_requests_opened"]),
+        ("PRS MERGED", profile["pull_requests_merged"]),
+        ("PRS REVIEWED", profile["pull_requests_reviewed"]),
         ("FOLLOWERS", profile["followers"]),
     ]
     stat_blocks = []
     for index, (label, value) in enumerate(stats):
-        column = index % 2
-        row = index // 2
-        x = 30 + column * 225
-        y = 90 + row * 58
+        column = index % 3
+        row = index // 3
+        x = 30 + column * 153
+        y = 91 + row * 58
         stat_blocks.append(
             f'<text x="{x}" y="{y}" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="25" font-weight="700">{format_number(value)}</text>'
-            f'<text x="{x}" y="{y + 20}" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" font-weight="600" letter-spacing="1.2">{label}</text>'
+            f'<text x="{x}" y="{y + 20}" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9" font-weight="600" letter-spacing="1">{label}</text>'
         )
 
     body = f'''
@@ -139,7 +154,7 @@ def render_stats(profile):
   <text x="467" y="36" text-anchor="end" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">since {profile['since']}</text>
   <rect x="28" y="52" width="326" height="3" rx="1.5" fill="url(#line)"/>
   {''.join(stat_blocks)}'''
-    return svg_shell(body, f"{profile['name']}'s GitHub statistics", "Public repositories, stars, forks and followers")
+    return svg_shell(body, f"{profile['name']}'s GitHub statistics", "Public repositories, stars, pull requests opened, merged and reviewed, and followers")
 
 
 def render_languages(profile):
