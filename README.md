@@ -9,8 +9,7 @@
   <a href="mailto:23722032@bjtu.edu.cn"><img src="https://img.shields.io/badge/Email-联系我-2DD4BF?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
-**北京交通大学 · 计算机科学与技术**<br />
-把协议、并发与智能体，构建成稳定、清晰、可维护的软件。
+**北京交通大学 ·  大四 · 计算机科学与技术**<br />
 
 </div>
 
