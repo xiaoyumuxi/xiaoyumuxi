@@ -84,7 +84,10 @@ def collect_profile(username, token=None):
 
     pull_requests_opened = github_search_count(f"is:pr author:{username}", token)
     pull_requests_merged = github_search_count(f"is:pr author:{username} is:merged", token)
-    pull_requests_reviewed = github_search_count(f"is:pr reviewed-by:{username} -author:{username}", token)
+    external_pull_requests = github_search_count(f"is:pr author:{username} -user:{username}", token)
+    external_pull_requests_merged = github_search_count(
+        f"is:pr author:{username} is:merged -user:{username}", token
+    )
 
     return {
         "name": user.get("name") or username,
@@ -94,7 +97,8 @@ def collect_profile(username, token=None):
         "stars": sum(repo["stargazers_count"] for repo in owned_repos),
         "pull_requests_opened": pull_requests_opened,
         "pull_requests_merged": pull_requests_merged,
-        "pull_requests_reviewed": pull_requests_reviewed,
+        "external_pull_requests": external_pull_requests,
+        "external_pull_requests_merged": external_pull_requests_merged,
         "since": user["created_at"][:4],
         "languages": languages,
     }
@@ -135,8 +139,8 @@ def render_stats(profile):
         ("STARS EARNED", profile["stars"]),
         ("PRS OPENED", profile["pull_requests_opened"]),
         ("PRS MERGED", profile["pull_requests_merged"]),
-        ("PRS REVIEWED", profile["pull_requests_reviewed"]),
-        ("FOLLOWERS", profile["followers"]),
+        ("EXTERNAL PRS", profile["external_pull_requests"]),
+        ("EXTERNAL MERGED", profile["external_pull_requests_merged"]),
     ]
     stat_blocks = []
     for index, (label, value) in enumerate(stats):
@@ -154,7 +158,7 @@ def render_stats(profile):
   <text x="467" y="36" text-anchor="end" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">since {profile['since']}</text>
   <rect x="28" y="52" width="326" height="3" rx="1.5" fill="url(#line)"/>
   {''.join(stat_blocks)}'''
-    return svg_shell(body, f"{profile['name']}'s GitHub statistics", "Public repositories, stars, pull requests opened, merged and reviewed, and followers")
+    return svg_shell(body, f"{profile['name']}'s GitHub statistics", "Public repositories, stars, pull requests opened and merged, including contributions to repositories owned by others")
 
 
 def render_languages(profile):
