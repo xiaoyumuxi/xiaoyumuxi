@@ -1,0 +1,21 @@
+<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Xiaoyumuxi's GitHub statistics</title>
+  <desc id="desc">Public repositories, stars, forks and followers</desc>
+  <defs>
+    <linearGradient id="card" x1="0" y1="0" x2="495" y2="195" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1020"/>
+      <stop offset="1" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="line" x1="28" y1="0" x2="360" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2DD4BF"/>
+      <stop offset="0.55" stop-color="#58A6FF"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="493" height="193" rx="15" fill="url(#card)" stroke="#334155" stroke-width="2"/>
+  
+  <text x="28" y="37" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="700">GitHub signals</text>
+  <text x="467" y="36" text-anchor="end" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">since 2023</text>
+  <rect x="28" y="52" width="326" height="3" rx="1.5" fill="url(#line)"/>
+  <text x="30" y="90" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="25" font-weight="700">28</text><text x="30" y="110" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" font-weight="600" letter-spacing="1.2">REPOSITORIES</text><text x="255" y="90" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="25" font-weight="700">5</text><text x="255" y="110" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" font-weight="600" letter-spacing="1.2">STARS EARNED</text><text x="30" y="148" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="25" font-weight="700">0</text><text x="30" y="168" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" font-weight="600" letter-spacing="1.2">FORKS</text><text x="255" y="148" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="25" font-weight="700">4</text><text x="255" y="168" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" font-weight="600" letter-spacing="1.2">FOLLOWERS</text>
+</svg>

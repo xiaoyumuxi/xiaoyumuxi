@@ -1,0 +1,78 @@
+<svg width="1200" height="320" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Xiaoyumuxi</title>
+  <desc id="desc">Backend systems, AI applications and open source</desc>
+  <defs>
+    <linearGradient id="background" x1="80" y1="30" x2="1120" y2="290" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1020"/>
+      <stop offset="0.58" stop-color="#111B35"/>
+      <stop offset="1" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="110" y1="0" x2="650" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2DD4BF"/>
+      <stop offset="0.52" stop-color="#58A6FF"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(1040 48) rotate(135) scale(330 280)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#58A6FF" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#58A6FF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#94A3B8" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="320" rx="24" fill="url(#background)"/>
+  <rect width="1200" height="320" rx="24" fill="url(#grid)"/>
+  <rect width="1200" height="320" rx="24" fill="url(#glow)"/>
+
+  <g opacity="0.8">
+    <circle cx="38" cy="36" r="5" fill="#FB7185"/>
+    <circle cx="58" cy="36" r="5" fill="#FBBF24"/>
+    <circle cx="78" cy="36" r="5" fill="#34D399"/>
+    <text x="101" y="41" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">~/xiaoyumuxi/profile</text>
+  </g>
+
+  <g transform="translate(88 88)">
+    <text x="0" y="26" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="600" letter-spacing="2">BACKEND ENGINEER IN THE MAKING</text>
+    <text x="0" y="93" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="58" font-weight="750" letter-spacing="-2">XIAOYUMUXI</text>
+    <rect x="0" y="112" width="540" height="4" rx="2" fill="url(#accent)"/>
+    <text x="0" y="157" fill="#CBD5E1" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20">Backend systems · AI applications · Open source</text>
+    <text x="0" y="195" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">BJTU / Computer Science / Shanghai</text>
+  </g>
+
+  <g transform="translate(790 72)">
+    <path d="M88 36H198M198 36L260 92M198 36L198 145M88 36L34 100M34 100L100 164M100 164L198 145M198 145L278 206M100 164L62 226" stroke="#58A6FF" stroke-opacity="0.48" stroke-width="2"/>
+    <path d="M34 100L198 145M88 36L100 164M198 36L278 206" stroke="#2DD4BF" stroke-opacity="0.32" stroke-width="2" stroke-dasharray="7 8"/>
+
+    <g>
+      <rect x="42" y="14" width="92" height="44" rx="10" fill="#111827" stroke="#2DD4BF" stroke-width="2"/>
+      <text x="88" y="41" text-anchor="middle" fill="#CCFBF1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">gateway</text>
+    </g>
+    <g>
+      <rect x="154" y="14" width="88" height="44" rx="10" fill="#111827" stroke="#58A6FF" stroke-width="2"/>
+      <text x="198" y="41" text-anchor="middle" fill="#DBEAFE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">service</text>
+    </g>
+    <g>
+      <rect x="-7" y="78" width="82" height="44" rx="10" fill="#111827" stroke="#A78BFA" stroke-width="2"/>
+      <text x="34" y="105" text-anchor="middle" fill="#EDE9FE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">agent</text>
+    </g>
+    <g>
+      <rect x="154" y="123" width="88" height="44" rx="10" fill="#111827" stroke="#58A6FF" stroke-width="2"/>
+      <text x="198" y="150" text-anchor="middle" fill="#DBEAFE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">runtime</text>
+    </g>
+    <g>
+      <rect x="56" y="142" width="88" height="44" rx="10" fill="#111827" stroke="#2DD4BF" stroke-width="2"/>
+      <text x="100" y="169" text-anchor="middle" fill="#CCFBF1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">storage</text>
+    </g>
+    <g>
+      <rect x="236" y="184" width="84" height="44" rx="10" fill="#111827" stroke="#A78BFA" stroke-width="2"/>
+      <text x="278" y="211" text-anchor="middle" fill="#EDE9FE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">tools</text>
+    </g>
+    <g>
+      <rect x="18" y="204" width="88" height="44" rx="10" fill="#111827" stroke="#58A6FF" stroke-width="2"/>
+      <text x="62" y="231" text-anchor="middle" fill="#DBEAFE" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">events</text>
+    </g>
+  </g>
+
+  <rect x="1" y="1" width="1198" height="318" rx="23" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="2"/>
+</svg>
