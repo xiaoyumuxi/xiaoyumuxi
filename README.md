@@ -22,10 +22,6 @@ learning  Rust · 操作系统 · Agent Runtime
 goal      在真实项目与开源协作中持续打磨工程能力
 ```
 
-- 🔭 正在探索高性能网络通信、RPC 框架与 AI Agent 基础设施
-- 🧩 喜欢从协议和底层机制出发，把复杂问题拆成可验证的模块
-- 🤝 期待参与后端基础设施、开发者工具和 AI 工程相关的开源项目
-
 ## `02 / TOOLBOX`
 
 <p align="center">
