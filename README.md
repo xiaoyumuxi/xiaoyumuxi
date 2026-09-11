@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/header.svg" width="100%" alt="Xiaoyumuxi — Backend systems and AI applications" />
+<a href="https://ghfind.com/u/xiaoyumuxi?ref=badge"><img src="https://ghfind.com/api/card/xiaoyumuxi?theme=dark" alt="GitHub Roast" width="600" /></a>
 
 <p>
   <a href="https://github.com/xiaoyumuxi"><img src="https://img.shields.io/badge/GitHub-xiaoyumuxi-0B1020?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
@@ -44,3 +44,4 @@ goal      在真实项目与开源协作中持续打磨工程能力
 <div align="center">
   <sub>Keep building. Keep learning. Make the system explain itself.</sub>
 </div>
+
