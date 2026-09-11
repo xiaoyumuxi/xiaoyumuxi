@@ -35,13 +35,10 @@ goal      在真实项目与开源协作中持续打磨工程能力
 <img width="49%" src="./profile/stats.svg" alt="Xiaoyumuxi's GitHub statistics" />
 <img width="49%" src="./profile/top-langs.svg" alt="Languages used across Xiaoyumuxi's repositories" />
 
-<sub>Generated from the GitHub API. Public PR activity spans all repositories; known mirrors/templates are excluded from language totals.</sub>
 
 </div>
 
 ---
 
-<div align="center">
-  <sub>Keep building. Keep learning. Make the system explain itself.</sub>
-</div>
+
 
