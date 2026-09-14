@@ -29,18 +29,31 @@ LANGUAGE_COLORS = {
     "TypeScript": "#3178C6",
     "Vue": "#42B883",
 }
-LANGUAGE_EXCLUDED_REPOS = {
-    "30daymakeos",
-    "cc-switch",
-    "chatlog_alpha",
-    "claude-code-source-code",
-    "first-contributions",
-    "firstcontributions",
-    "interview-guide",
-    "notionnext",
-    "thaw",
-    "weflow",
-    "wechat-mac-reader",
+EXTENSION_LANGUAGE = {
+    ".c": "C",
+    ".cc": "C++",
+    ".cpp": "C++",
+    ".cxx": "C++",
+    ".hpp": "C++",
+    ".cs": "C#",
+    ".css": "CSS",
+    ".go": "Go",
+    ".htm": "HTML",
+    ".html": "HTML",
+    ".java": "Java",
+    ".js": "JavaScript",
+    ".jsx": "JavaScript",
+    ".kt": "Kotlin",
+    ".kts": "Kotlin",
+    ".lua": "Lua",
+    ".py": "Python",
+    ".rs": "Rust",
+    ".bash": "Shell",
+    ".sh": "Shell",
+    ".swift": "Swift",
+    ".ts": "TypeScript",
+    ".tsx": "TypeScript",
+    ".vue": "Vue",
 }
 
 
@@ -70,17 +83,65 @@ def github_search_count(query, token=None):
     return result["total_count"]
 
 
+def language_from_filename(filename):
+    return EXTENSION_LANGUAGE.get(Path(filename).suffix.lower())
+
+
+def collect_pr_languages(username, token=None):
+    languages = {}
+    query = f"is:pr author:{username} is:merged"
+    page = 1
+
+    while True:
+        params = urlencode({"q": query, "per_page": 100, "page": page})
+        result = github_get(f"/search/issues?{params}", token)
+        pull_requests = result.get("items", [])
+
+        if not pull_requests:
+            break
+
+        for pull_request in pull_requests:
+            repo_path = pull_request["repository_url"].split("/repos/", 1)[1]
+            pull_number = pull_request["number"]
+            file_page = 1
+
+            while True:
+                files = github_get(
+                    f"/repos/{repo_path}/pulls/{pull_number}/files"
+                    f"?per_page=100&page={file_page}",
+                    token,
+                )
+
+                if not files:
+                    break
+
+                for changed_file in files:
+                    language = language_from_filename(changed_file["filename"])
+                    if not language:
+                        continue
+
+                    additions = changed_file.get("additions", 0)
+                    languages[language] = languages.get(language, 0) + additions
+
+                if len(files) < 100:
+                    break
+
+                file_page += 1
+
+        if len(pull_requests) < 100:
+            break
+
+        page += 1
+
+    return languages
+
+
 def collect_profile(username, token=None):
     user = github_get(f"/users/{username}", token)
     repos = github_get(f"/users/{username}/repos?type=owner&sort=updated&per_page=100", token)
     owned_repos = [repo for repo in repos if not repo["fork"] and repo["owner"]["login"].lower() == username.lower()]
 
-    languages = {}
-    language_repos = [repo for repo in owned_repos if repo["name"].lower() not in LANGUAGE_EXCLUDED_REPOS]
-    for repo in language_repos:
-        repo_languages = github_get(f"/repos/{username}/{repo['name']}/languages", token)
-        for language, size in repo_languages.items():
-            languages[language] = languages.get(language, 0) + size
+    languages = collect_pr_languages(username, token)
 
     pull_requests_opened = github_search_count(f"is:pr author:{username}", token)
     pull_requests_merged = github_search_count(f"is:pr author:{username} is:merged", token)
@@ -162,18 +223,24 @@ def render_stats(profile):
 
 
 def render_languages(profile):
-    sorted_languages = sorted(profile["languages"].items(), key=lambda item: item[1], reverse=True)[:6]
-    total = sum(size for _, size in sorted_languages)
+    all_languages = sorted(profile["languages"].items(), key=lambda item: item[1], reverse=True)
+    total = sum(size for _, size in all_languages)
 
     if total == 0:
-        sorted_languages = [("No language data", 1)]
+        displayed_languages = [("No language data", 1)]
         total = 1
+    elif len(all_languages) > 6:
+        top_languages = all_languages[:5]
+        other_size = sum(size for _, size in all_languages[5:])
+        displayed_languages = top_languages + [("Other", other_size)]
+    else:
+        displayed_languages = all_languages
 
     segments = []
     labels = []
     offset = 28.0
     bar_width = 439.0
-    for index, (language, size) in enumerate(sorted_languages):
+    for index, (language, size) in enumerate(displayed_languages):
         percentage = size / total
         width = bar_width * percentage
         color = LANGUAGE_COLORS.get(language, "#94A3B8")
@@ -191,12 +258,12 @@ def render_languages(profile):
         )
 
     body = f'''
-  <text x="28" y="37" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="700">Code footprint</text>
-  <text x="467" y="36" text-anchor="end" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">owned public repos</text>
+  <text x="28" y="37" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="700">Contribution footprint</text>
+  <text x="467" y="36" text-anchor="end" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">merged pull requests</text>
   <clipPath id="bar"><rect x="28" y="58" width="439" height="10" rx="5"/></clipPath>
   <g clip-path="url(#bar)">{''.join(segments)}</g>
   {''.join(labels)}'''
-    return svg_shell(body, f"{profile['name']}'s most-used languages", "Language distribution across owned public repositories")
+    return svg_shell(body, f"{profile['name']}'s contribution languages", "Language distribution across additions in merged pull requests")
 
 
 def write_if_changed(path, content):
