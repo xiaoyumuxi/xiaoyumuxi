@@ -139,7 +139,11 @@ def collect_pr_languages(username, token=None):
 def collect_profile(username, token=None):
     user = github_get(f"/users/{username}", token)
     repos = github_get(f"/users/{username}/repos?type=owner&sort=updated&per_page=100", token)
-    owned_repos = [repo for repo in repos if not repo["fork"] and repo["owner"]["login"].lower() == username.lower()]
+    owned_repos = [
+        repo
+        for repo in repos
+        if not repo["fork"] and repo["owner"]["login"].lower() == username.lower()
+    ]
 
     languages = collect_pr_languages(username, token)
 
@@ -171,6 +175,20 @@ def format_number(value):
     if value >= 1_000:
         return f"{value / 1_000:.1f}k"
     return str(value)
+
+
+def language_breakdown(profile):
+    languages = sorted(profile["languages"].items(), key=lambda item: item[1], reverse=True)
+    total = sum(additions for _, additions in languages)
+    rows = [
+        {
+            "language": language,
+            "additions": additions,
+            "percentage": additions / total * 100 if total else 0.0,
+        }
+        for language, additions in languages
+    ]
+    return rows, total
 
 
 def svg_shell(body, title, description, width=495, height=195):
@@ -223,8 +241,8 @@ def render_stats(profile):
 
 
 def render_languages(profile):
-    all_languages = sorted(profile["languages"].items(), key=lambda item: item[1], reverse=True)
-    total = sum(size for _, size in all_languages)
+    rows, total = language_breakdown(profile)
+    all_languages = [(row["language"], row["additions"]) for row in rows]
 
     if total == 0:
         displayed_languages = [("No language data", 1)]
@@ -266,6 +284,59 @@ def render_languages(profile):
     return svg_shell(body, f"{profile['name']}'s contribution languages", "Language distribution across additions in merged pull requests")
 
 
+def render_language_report(profile):
+    rows, total = language_breakdown(profile)
+    lines = [
+        "# Contribution language report",
+        "",
+        f"Source-code additions from merged pull requests authored by [`@{profile['username']}`](https://github.com/{profile['username']}).",
+        "",
+        f"- Merged pull requests: **{profile['pull_requests_merged']:,}**",
+        f"- Total source-code additions: **{total:,} lines**",
+        "",
+        "| Language | Added lines | Share |",
+        "| --- | ---: | ---: |",
+    ]
+
+    if rows:
+        for row in rows:
+            lines.append(
+                f"| {row['language']} | {row['additions']:,} | {row['percentage']:.2f}% |"
+            )
+        lines.append(f"| **Total** | **{total:,}** | **100.00%** |")
+    else:
+        lines.append("| No language data | 0 | 0.00% |")
+
+    lines.extend(
+        [
+            "",
+            "> Generated automatically by `.github/workflows/profile-cards.yml`. "
+            "Only file extensions mapped as source-code languages are counted; documentation and configuration files are ignored.",
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
+def render_language_json(profile):
+    rows, total = language_breakdown(profile)
+    payload = {
+        "username": profile["username"],
+        "scope": "source-code additions in merged pull requests",
+        "merged_pull_requests": profile["pull_requests_merged"],
+        "total_additions": total,
+        "languages": [
+            {
+                "language": row["language"],
+                "additions": row["additions"],
+                "percentage": round(row["percentage"], 4),
+            }
+            for row in rows
+        ],
+    }
+    return json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
+
+
 def write_if_changed(path, content):
     if path.exists() and path.read_text(encoding="utf-8") == content:
         print(f"Unchanged: {path}")
@@ -278,7 +349,7 @@ def write_if_changed(path, content):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate self-hosted SVG cards for a GitHub profile README.")
+    parser = argparse.ArgumentParser(description="Generate self-hosted profile cards and contribution reports.")
     parser.add_argument("--username", required=True)
     parser.add_argument("--output-dir", default="profile")
     args = parser.parse_args()
@@ -289,6 +360,8 @@ def main():
 
     write_if_changed(output_dir / "stats.svg", render_stats(profile))
     write_if_changed(output_dir / "top-langs.svg", render_languages(profile))
+    write_if_changed(output_dir / "contribution-languages.md", render_language_report(profile))
+    write_if_changed(output_dir / "contribution-languages.json", render_language_json(profile))
 
 
 if __name__ == "__main__":
