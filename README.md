@@ -33,7 +33,7 @@ goal      在真实项目与开源协作中持续打磨工程能力
 <div align="center">
 
 <img width="49%" src="./profile/stats.svg" alt="Xiaoyumuxi's GitHub statistics" />
-<img width="49%" src="./profile/top-langs.svg" alt="Languages used across Xiaoyumuxi's repositories" />
+<img width="49%" src="./profile/top-langs.svg" alt="Languages contributed across Xiaoyumuxi's merged pull requests" />
 
 
 </div>
