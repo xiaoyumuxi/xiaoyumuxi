@@ -9,6 +9,7 @@ on:
       - main
     paths:
       - "scripts/generate_profile_cards.py"
+      - ".github/profile-languages.md"
       - ".github/workflows/profile-cards.yml"
 
 permissions:
