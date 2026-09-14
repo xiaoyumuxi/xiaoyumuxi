@@ -11,6 +11,8 @@ from xml.sax.saxutils import escape
 
 
 API_ROOT = "https://api.github.com"
+MAX_PROFILE_LANGUAGES = 5
+
 LANGUAGE_COLORS = {
     "C": "#A8B9CC",
     "C#": "#512BD4",
@@ -29,6 +31,7 @@ LANGUAGE_COLORS = {
     "TypeScript": "#3178C6",
     "Vue": "#42B883",
 }
+
 EXTENSION_LANGUAGE = {
     ".c": "C",
     ".cc": "C++",
@@ -72,9 +75,13 @@ def github_get(path, token=None):
             return json.load(response)
     except HTTPError as error:
         details = error.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"GitHub API returned {error.code} for {path}: {details}") from error
+        raise RuntimeError(
+            f"GitHub API returned {error.code} for {path}: {details}"
+        ) from error
     except URLError as error:
-        raise RuntimeError(f"Could not reach GitHub API for {path}: {error.reason}") from error
+        raise RuntimeError(
+            f"Could not reach GitHub API for {path}: {error.reason}"
+        ) from error
 
 
 def github_search_count(query, token=None):
@@ -85,6 +92,32 @@ def github_search_count(query, token=None):
 
 def language_from_filename(filename):
     return EXTENSION_LANGUAGE.get(Path(filename).suffix.lower())
+
+
+def load_display_languages(path):
+    path = Path(path)
+    if not path.exists():
+        print(f"Warning: language config not found: {path}; falling back to Top 5.")
+        return []
+
+    selected = []
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        lowered = line.lower()
+        if not (lowered.startswith("- [x] ") or lowered.startswith("* [x] ")):
+            continue
+
+        language = line[6:].strip()
+        if language and language not in selected:
+            selected.append(language)
+
+    if len(selected) > MAX_PROFILE_LANGUAGES:
+        print(
+            f"Warning: {len(selected)} languages are checked; "
+            f"only the first {MAX_PROFILE_LANGUAGES} are used on the profile card."
+        )
+
+    return selected[:MAX_PROFILE_LANGUAGES]
 
 
 def collect_pr_languages(username, token=None):
@@ -138,18 +171,26 @@ def collect_pr_languages(username, token=None):
 
 def collect_profile(username, token=None):
     user = github_get(f"/users/{username}", token)
-    repos = github_get(f"/users/{username}/repos?type=owner&sort=updated&per_page=100", token)
+    repos = github_get(
+        f"/users/{username}/repos?type=owner&sort=updated&per_page=100",
+        token,
+    )
     owned_repos = [
         repo
         for repo in repos
-        if not repo["fork"] and repo["owner"]["login"].lower() == username.lower()
+        if not repo["fork"]
+        and repo["owner"]["login"].lower() == username.lower()
     ]
 
     languages = collect_pr_languages(username, token)
 
     pull_requests_opened = github_search_count(f"is:pr author:{username}", token)
-    pull_requests_merged = github_search_count(f"is:pr author:{username} is:merged", token)
-    external_pull_requests = github_search_count(f"is:pr author:{username} -user:{username}", token)
+    pull_requests_merged = github_search_count(
+        f"is:pr author:{username} is:merged", token
+    )
+    external_pull_requests = github_search_count(
+        f"is:pr author:{username} -user:{username}", token
+    )
     external_pull_requests_merged = github_search_count(
         f"is:pr author:{username} is:merged -user:{username}", token
     )
@@ -178,7 +219,11 @@ def format_number(value):
 
 
 def language_breakdown(profile):
-    languages = sorted(profile["languages"].items(), key=lambda item: item[1], reverse=True)
+    languages = sorted(
+        profile["languages"].items(),
+        key=lambda item: item[1],
+        reverse=True,
+    )
     total = sum(additions for _, additions in languages)
     rows = [
         {
@@ -189,6 +234,42 @@ def language_breakdown(profile):
         for language, additions in languages
     ]
     return rows, total
+
+
+def choose_display_languages(profile, configured_languages):
+    rows, total = language_breakdown(profile)
+
+    if total == 0:
+        return [("No language data", 1)], 1
+
+    additions_by_language = {
+        row["language"]: row["additions"]
+        for row in rows
+    }
+
+    displayed = []
+    if configured_languages:
+        for language in configured_languages:
+            additions = additions_by_language.get(language)
+            if additions is None:
+                print(
+                    f'Warning: checked language "{language}" has no contribution data; skipping.'
+                )
+                continue
+            displayed.append((language, additions))
+
+    if not displayed:
+        displayed = [
+            (row["language"], row["additions"])
+            for row in rows[:MAX_PROFILE_LANGUAGES]
+        ]
+
+    displayed_total = sum(additions for _, additions in displayed)
+    other_size = total - displayed_total
+    if other_size > 0:
+        displayed.append(("Other", other_size))
+
+    return displayed, total
 
 
 def svg_shell(body, title, description, width=495, height=195):
@@ -237,32 +318,31 @@ def render_stats(profile):
   <text x="467" y="36" text-anchor="end" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11">since {profile['since']}</text>
   <rect x="28" y="52" width="326" height="3" rx="1.5" fill="url(#line)"/>
   {''.join(stat_blocks)}'''
-    return svg_shell(body, f"{profile['name']}'s GitHub statistics", "Public repositories, stars, pull requests opened and merged, including contributions to repositories owned by others")
+    return svg_shell(
+        body,
+        f"{profile['name']}'s GitHub statistics",
+        "Public repositories, stars, pull requests opened and merged, including contributions to repositories owned by others",
+    )
 
 
-def render_languages(profile):
-    rows, total = language_breakdown(profile)
-    all_languages = [(row["language"], row["additions"]) for row in rows]
-
-    if total == 0:
-        displayed_languages = [("No language data", 1)]
-        total = 1
-    elif len(all_languages) > 6:
-        top_languages = all_languages[:5]
-        other_size = sum(size for _, size in all_languages[5:])
-        displayed_languages = top_languages + [("Other", other_size)]
-    else:
-        displayed_languages = all_languages
+def render_languages(profile, configured_languages):
+    displayed_languages, total = choose_display_languages(
+        profile,
+        configured_languages,
+    )
 
     segments = []
     labels = []
     offset = 28.0
     bar_width = 439.0
+
     for index, (language, size) in enumerate(displayed_languages):
         percentage = size / total
         width = bar_width * percentage
         color = LANGUAGE_COLORS.get(language, "#94A3B8")
-        segments.append(f'<rect x="{offset:.2f}" y="58" width="{width:.2f}" height="10" fill="{color}"/>')
+        segments.append(
+            f'<rect x="{offset:.2f}" y="58" width="{width:.2f}" height="10" fill="{color}"/>'
+        )
         offset += width
 
         column = index % 2
@@ -281,7 +361,11 @@ def render_languages(profile):
   <clipPath id="bar"><rect x="28" y="58" width="439" height="10" rx="5"/></clipPath>
   <g clip-path="url(#bar)">{''.join(segments)}</g>
   {''.join(labels)}'''
-    return svg_shell(body, f"{profile['name']}'s contribution languages", "Language distribution across additions in merged pull requests")
+    return svg_shell(
+        body,
+        f"{profile['name']}'s contribution languages",
+        "Language distribution across additions in merged pull requests",
+    )
 
 
 def render_language_report(profile):
@@ -349,19 +433,36 @@ def write_if_changed(path, content):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate self-hosted profile cards and contribution reports.")
+    parser = argparse.ArgumentParser(
+        description="Generate self-hosted profile cards and contribution reports."
+    )
     parser.add_argument("--username", required=True)
     parser.add_argument("--output-dir", default="profile")
+    parser.add_argument(
+        "--language-config",
+        default=".github/profile-languages.md",
+        help="Markdown task-list file controlling languages shown on the profile card.",
+    )
     args = parser.parse_args()
 
     token = os.getenv("GITHUB_TOKEN")
     profile = collect_profile(args.username, token)
+    configured_languages = load_display_languages(args.language_config)
     output_dir = Path(args.output_dir)
 
     write_if_changed(output_dir / "stats.svg", render_stats(profile))
-    write_if_changed(output_dir / "top-langs.svg", render_languages(profile))
-    write_if_changed(output_dir / "contribution-languages.md", render_language_report(profile))
-    write_if_changed(output_dir / "contribution-languages.json", render_language_json(profile))
+    write_if_changed(
+        output_dir / "top-langs.svg",
+        render_languages(profile, configured_languages),
+    )
+    write_if_changed(
+        output_dir / "contribution-languages.md",
+        render_language_report(profile),
+    )
+    write_if_changed(
+        output_dir / "contribution-languages.json",
+        render_language_json(profile),
+    )
 
 
 if __name__ == "__main__":
