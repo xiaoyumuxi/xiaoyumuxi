@@ -2,8 +2,8 @@
 
 Source-code additions from merged pull requests authored by [`@xiaoyumuxi`](https://github.com/xiaoyumuxi).
 
-- Merged pull requests: **36**
-- Total source-code additions: **52,859 lines**
+- Merged pull requests: **37**
+- Total source-code additions: **52,863 lines**
 
 | Language | Added lines | Share |
 | --- | ---: | ---: |
@@ -16,6 +16,7 @@ Source-code additions from merged pull requests authored by [`@xiaoyumuxi`](http
 | Python | 2,208 | 4.18% |
 | Shell | 619 | 1.17% |
 | HTML | 54 | 0.10% |
-| **Total** | **52,859** | **100.00%** |
+| Swift | 4 | 0.01% |
+| **Total** | **52,863** | **100.00%** |
 
 > Generated automatically by `.github/workflows/profile-cards.yml`. Only file extensions mapped as source-code languages are counted; documentation and configuration files are ignored.
