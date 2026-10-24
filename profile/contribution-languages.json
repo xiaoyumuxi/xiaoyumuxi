@@ -1,63 +1,68 @@
 {
   "username": "xiaoyumuxi",
   "scope": "source-code additions in merged pull requests",
-  "merged_pull_requests": 168,
-  "total_additions": 260304,
+  "merged_pull_requests": 185,
+  "total_additions": 289369,
   "languages": [
     {
       "language": "Swift",
-      "additions": 133104,
-      "percentage": 51.1341
+      "additions": 142322,
+      "percentage": 49.1836
     },
     {
       "language": "Rust",
-      "additions": 61413,
-      "percentage": 23.5928
+      "additions": 81019,
+      "percentage": 27.9985
     },
     {
       "language": "TypeScript",
-      "additions": 17589,
-      "percentage": 6.7571
+      "additions": 17648,
+      "percentage": 6.0988
     },
     {
       "language": "Go",
       "additions": 17047,
-      "percentage": 6.5489
+      "percentage": 5.8911
     },
     {
       "language": "Java",
-      "additions": 13760,
-      "percentage": 5.2861
+      "additions": 13775,
+      "percentage": 4.7604
     },
     {
       "language": "CSS",
       "additions": 5888,
-      "percentage": 2.262
+      "percentage": 2.0348
     },
     {
       "language": "Vue",
       "additions": 4400,
-      "percentage": 1.6903
+      "percentage": 1.5205
     },
     {
       "language": "Shell",
-      "additions": 3025,
-      "percentage": 1.1621
+      "additions": 3165,
+      "percentage": 1.0938
     },
     {
       "language": "Python",
       "additions": 2473,
-      "percentage": 0.95
+      "percentage": 0.8546
     },
     {
       "language": "HTML",
       "additions": 1595,
-      "percentage": 0.6127
+      "percentage": 0.5512
+    },
+    {
+      "language": "Kotlin",
+      "additions": 27,
+      "percentage": 0.0093
     },
     {
       "language": "C",
       "additions": 10,
-      "percentage": 0.0038
+      "percentage": 0.0035
     },
     {
       "language": "JavaScript",
