@@ -1,73 +1,73 @@
 {
   "username": "xiaoyumuxi",
   "scope": "source-code additions in merged pull requests",
-  "merged_pull_requests": 240,
-  "total_additions": 369310,
+  "merged_pull_requests": 253,
+  "total_additions": 386323,
   "languages": [
     {
       "language": "Swift",
-      "additions": 195216,
-      "percentage": 52.8597
+      "additions": 196242,
+      "percentage": 50.7974
     },
     {
       "language": "Rust",
-      "additions": 105403,
-      "percentage": 28.5405
-    },
-    {
-      "language": "TypeScript",
-      "additions": 18978,
-      "percentage": 5.1388
+      "additions": 108166,
+      "percentage": 27.9989
     },
     {
       "language": "Go",
-      "additions": 17796,
-      "percentage": 4.8187
+      "additions": 19674,
+      "percentage": 5.0926
+    },
+    {
+      "language": "TypeScript",
+      "additions": 19278,
+      "percentage": 4.9901
     },
     {
       "language": "Java",
-      "additions": 13775,
-      "percentage": 3.7299
+      "additions": 15748,
+      "percentage": 4.0764
+    },
+    {
+      "language": "JavaScript",
+      "additions": 9045,
+      "percentage": 2.3413
     },
     {
       "language": "CSS",
-      "additions": 5888,
-      "percentage": 1.5943
+      "additions": 5893,
+      "percentage": 1.5254
     },
     {
       "language": "Vue",
       "additions": 4400,
-      "percentage": 1.1914
+      "percentage": 1.1389
     },
     {
       "language": "Shell",
-      "additions": 3668,
-      "percentage": 0.9932
+      "additions": 3681,
+      "percentage": 0.9528
     },
     {
       "language": "Python",
       "additions": 2554,
-      "percentage": 0.6916
+      "percentage": 0.6611
     },
     {
       "language": "HTML",
-      "additions": 1595,
-      "percentage": 0.4319
+      "additions": 1605,
+      "percentage": 0.4155
     },
     {
       "language": "Kotlin",
       "additions": 27,
-      "percentage": 0.0073
+      "percentage": 0.007
     },
     {
       "language": "C",
       "additions": 10,
-      "percentage": 0.0027
-    },
-    {
-      "language": "JavaScript",
-      "additions": 0,
-      "percentage": 0.0
+      "percentage": 0.0026
     }
   ]
 }
