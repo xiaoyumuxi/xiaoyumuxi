@@ -1,73 +1,73 @@
 {
   "username": "xiaoyumuxi",
   "scope": "source-code additions in merged pull requests",
-  "merged_pull_requests": 253,
-  "total_additions": 386323,
+  "merged_pull_requests": 270,
+  "total_additions": 401532,
   "languages": [
     {
       "language": "Swift",
-      "additions": 196242,
-      "percentage": 50.7974
+      "additions": 202295,
+      "percentage": 50.3808
     },
     {
       "language": "Rust",
-      "additions": 108166,
-      "percentage": 27.9989
+      "additions": 113985,
+      "percentage": 28.3875
     },
     {
       "language": "Go",
-      "additions": 19674,
-      "percentage": 5.0926
+      "additions": 21515,
+      "percentage": 5.3582
     },
     {
       "language": "TypeScript",
-      "additions": 19278,
-      "percentage": 4.9901
+      "additions": 19737,
+      "percentage": 4.9154
     },
     {
       "language": "Java",
-      "additions": 15748,
-      "percentage": 4.0764
+      "additions": 15811,
+      "percentage": 3.9377
     },
     {
       "language": "JavaScript",
-      "additions": 9045,
-      "percentage": 2.3413
+      "additions": 9763,
+      "percentage": 2.4314
     },
     {
       "language": "CSS",
-      "additions": 5893,
-      "percentage": 1.5254
+      "additions": 6085,
+      "percentage": 1.5154
     },
     {
       "language": "Vue",
       "additions": 4400,
-      "percentage": 1.1389
+      "percentage": 1.0958
     },
     {
       "language": "Shell",
-      "additions": 3681,
-      "percentage": 0.9528
+      "additions": 3696,
+      "percentage": 0.9205
     },
     {
       "language": "Python",
-      "additions": 2554,
-      "percentage": 0.6611
+      "additions": 2560,
+      "percentage": 0.6376
     },
     {
       "language": "HTML",
-      "additions": 1605,
-      "percentage": 0.4155
+      "additions": 1648,
+      "percentage": 0.4104
     },
     {
       "language": "Kotlin",
       "additions": 27,
-      "percentage": 0.007
+      "percentage": 0.0067
     },
     {
       "language": "C",
       "additions": 10,
-      "percentage": 0.0026
+      "percentage": 0.0025
     }
   ]
 }
