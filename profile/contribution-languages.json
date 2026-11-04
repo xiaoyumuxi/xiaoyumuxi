@@ -1,73 +1,73 @@
 {
   "username": "xiaoyumuxi",
   "scope": "source-code additions in merged pull requests",
-  "merged_pull_requests": 270,
-  "total_additions": 401532,
+  "merged_pull_requests": 287,
+  "total_additions": 426720,
   "languages": [
     {
       "language": "Swift",
-      "additions": 202295,
-      "percentage": 50.3808
+      "additions": 215748,
+      "percentage": 50.5596
     },
     {
       "language": "Rust",
-      "additions": 113985,
-      "percentage": 28.3875
+      "additions": 124662,
+      "percentage": 29.214
     },
     {
       "language": "Go",
-      "additions": 21515,
-      "percentage": 5.3582
+      "additions": 22248,
+      "percentage": 5.2137
     },
     {
       "language": "TypeScript",
-      "additions": 19737,
-      "percentage": 4.9154
+      "additions": 19750,
+      "percentage": 4.6283
     },
     {
       "language": "Java",
-      "additions": 15811,
-      "percentage": 3.9377
+      "additions": 16074,
+      "percentage": 3.7669
     },
     {
       "language": "JavaScript",
       "additions": 9763,
-      "percentage": 2.4314
+      "percentage": 2.2879
     },
     {
       "language": "CSS",
       "additions": 6085,
-      "percentage": 1.5154
+      "percentage": 1.426
     },
     {
       "language": "Vue",
       "additions": 4400,
-      "percentage": 1.0958
+      "percentage": 1.0311
     },
     {
       "language": "Shell",
-      "additions": 3696,
-      "percentage": 0.9205
+      "additions": 3731,
+      "percentage": 0.8743
     },
     {
       "language": "Python",
       "additions": 2560,
-      "percentage": 0.6376
+      "percentage": 0.5999
     },
     {
       "language": "HTML",
       "additions": 1648,
-      "percentage": 0.4104
+      "percentage": 0.3862
     },
     {
       "language": "Kotlin",
       "additions": 27,
-      "percentage": 0.0067
+      "percentage": 0.0063
     },
     {
       "language": "C",
-      "additions": 10,
-      "percentage": 0.0025
+      "additions": 24,
+      "percentage": 0.0056
     }
   ]
 }
