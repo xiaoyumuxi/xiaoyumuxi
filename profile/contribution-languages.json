@@ -1,73 +1,73 @@
 {
   "username": "xiaoyumuxi",
   "scope": "source-code additions in merged pull requests",
-  "merged_pull_requests": 287,
-  "total_additions": 426720,
+  "merged_pull_requests": 328,
+  "total_additions": 478516,
   "languages": [
     {
       "language": "Swift",
-      "additions": 215748,
-      "percentage": 50.5596
+      "additions": 226113,
+      "percentage": 47.253
     },
     {
       "language": "Rust",
-      "additions": 124662,
-      "percentage": 29.214
+      "additions": 159183,
+      "percentage": 33.266
     },
     {
       "language": "Go",
       "additions": 22248,
-      "percentage": 5.2137
+      "percentage": 4.6494
     },
     {
       "language": "TypeScript",
-      "additions": 19750,
-      "percentage": 4.6283
+      "additions": 21017,
+      "percentage": 4.3921
     },
     {
       "language": "Java",
-      "additions": 16074,
-      "percentage": 3.7669
+      "additions": 20625,
+      "percentage": 4.3102
     },
     {
       "language": "JavaScript",
       "additions": 9763,
-      "percentage": 2.2879
+      "percentage": 2.0403
     },
     {
       "language": "CSS",
       "additions": 6085,
-      "percentage": 1.426
+      "percentage": 1.2716
+    },
+    {
+      "language": "Shell",
+      "additions": 4823,
+      "percentage": 1.0079
     },
     {
       "language": "Vue",
       "additions": 4400,
-      "percentage": 1.0311
-    },
-    {
-      "language": "Shell",
-      "additions": 3731,
-      "percentage": 0.8743
+      "percentage": 0.9195
     },
     {
       "language": "Python",
       "additions": 2560,
-      "percentage": 0.5999
+      "percentage": 0.535
     },
     {
       "language": "HTML",
       "additions": 1648,
-      "percentage": 0.3862
+      "percentage": 0.3444
     },
     {
       "language": "Kotlin",
       "additions": 27,
-      "percentage": 0.0063
+      "percentage": 0.0056
     },
     {
       "language": "C",
       "additions": 24,
-      "percentage": 0.0056
+      "percentage": 0.005
     }
   ]
 }
