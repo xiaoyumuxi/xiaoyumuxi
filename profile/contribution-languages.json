@@ -1,73 +1,73 @@
 {
   "username": "xiaoyumuxi",
   "scope": "source-code additions in merged pull requests",
-  "merged_pull_requests": 341,
-  "total_additions": 506749,
+  "merged_pull_requests": 356,
+  "total_additions": 522803,
   "languages": [
     {
       "language": "Swift",
-      "additions": 230628,
-      "percentage": 45.5113
+      "additions": 237039,
+      "percentage": 45.34
     },
     {
       "language": "Rust",
-      "additions": 181307,
-      "percentage": 35.7785
+      "additions": 187337,
+      "percentage": 35.8332
     },
     {
       "language": "Go",
-      "additions": 22248,
-      "percentage": 4.3903
-    },
-    {
-      "language": "Java",
-      "additions": 21899,
-      "percentage": 4.3215
+      "additions": 23605,
+      "percentage": 4.5151
     },
     {
       "language": "TypeScript",
-      "additions": 21179,
-      "percentage": 4.1794
+      "additions": 22824,
+      "percentage": 4.3657
+    },
+    {
+      "language": "Java",
+      "additions": 22015,
+      "percentage": 4.211
     },
     {
       "language": "JavaScript",
       "additions": 9763,
-      "percentage": 1.9266
+      "percentage": 1.8674
     },
     {
       "language": "CSS",
       "additions": 6085,
-      "percentage": 1.2008
+      "percentage": 1.1639
     },
     {
       "language": "Shell",
-      "additions": 4954,
-      "percentage": 0.9776
+      "additions": 5010,
+      "percentage": 0.9583
     },
     {
       "language": "Vue",
       "additions": 4400,
-      "percentage": 0.8683
+      "percentage": 0.8416
     },
     {
       "language": "Python",
-      "additions": 2560,
-      "percentage": 0.5052
+      "additions": 2981,
+      "percentage": 0.5702
     },
     {
       "language": "HTML",
       "additions": 1648,
-      "percentage": 0.3252
+      "percentage": 0.3152
     },
     {
       "language": "Kotlin",
       "additions": 54,
-      "percentage": 0.0107
+      "percentage": 0.0103
     },
     {
       "language": "C",
-      "additions": 24,
-      "percentage": 0.0047
+      "additions": 42,
+      "percentage": 0.008
     }
   ]
 }
