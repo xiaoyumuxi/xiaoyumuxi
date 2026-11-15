@@ -1,73 +1,73 @@
 {
   "username": "xiaoyumuxi",
   "scope": "source-code additions in merged pull requests",
-  "merged_pull_requests": 432,
-  "total_additions": 868212,
+  "merged_pull_requests": 498,
+  "total_additions": 927354,
   "languages": [
     {
       "language": "Go",
-      "additions": 277476,
-      "percentage": 31.9595
+      "additions": 329107,
+      "percentage": 35.4888
     },
     {
       "language": "Rust",
-      "additions": 271293,
-      "percentage": 31.2473
+      "additions": 278056,
+      "percentage": 29.9838
     },
     {
       "language": "Swift",
       "additions": 237039,
-      "percentage": 27.302
+      "percentage": 25.5608
     },
     {
       "language": "TypeScript",
       "additions": 23618,
-      "percentage": 2.7203
+      "percentage": 2.5468
     },
     {
       "language": "Java",
       "additions": 22484,
-      "percentage": 2.5897
+      "percentage": 2.4245
     },
     {
       "language": "JavaScript",
-      "additions": 15067,
-      "percentage": 1.7354
+      "additions": 15422,
+      "percentage": 1.663
     },
     {
       "language": "CSS",
-      "additions": 6415,
-      "percentage": 0.7389
+      "additions": 6540,
+      "percentage": 0.7052
     },
     {
       "language": "Shell",
-      "additions": 5592,
-      "percentage": 0.6441
+      "additions": 5767,
+      "percentage": 0.6219
     },
     {
       "language": "Vue",
       "additions": 4400,
-      "percentage": 0.5068
+      "percentage": 0.4745
     },
     {
       "language": "Python",
-      "additions": 2981,
-      "percentage": 0.3433
+      "additions": 3068,
+      "percentage": 0.3308
     },
     {
       "language": "HTML",
-      "additions": 1708,
-      "percentage": 0.1967
+      "additions": 1714,
+      "percentage": 0.1848
     },
     {
       "language": "C",
       "additions": 85,
-      "percentage": 0.0098
+      "percentage": 0.0092
     },
     {
       "language": "Kotlin",
       "additions": 54,
-      "percentage": 0.0062
+      "percentage": 0.0058
     },
     {
       "language": "C++",

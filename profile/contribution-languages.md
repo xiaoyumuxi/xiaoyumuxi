@@ -2,25 +2,25 @@
 
 Source-code additions from merged pull requests authored by [`@xiaoyumuxi`](https://github.com/xiaoyumuxi).
 
-- Merged pull requests: **432**
-- Total source-code additions: **868,212 lines**
+- Merged pull requests: **498**
+- Total source-code additions: **927,354 lines**
 
 | Language | Added lines | Share |
 | --- | ---: | ---: |
-| Go | 277,476 | 31.96% |
-| Rust | 271,293 | 31.25% |
-| Swift | 237,039 | 27.30% |
-| TypeScript | 23,618 | 2.72% |
-| Java | 22,484 | 2.59% |
-| JavaScript | 15,067 | 1.74% |
-| CSS | 6,415 | 0.74% |
-| Shell | 5,592 | 0.64% |
-| Vue | 4,400 | 0.51% |
-| Python | 2,981 | 0.34% |
-| HTML | 1,708 | 0.20% |
+| Go | 329,107 | 35.49% |
+| Rust | 278,056 | 29.98% |
+| Swift | 237,039 | 25.56% |
+| TypeScript | 23,618 | 2.55% |
+| Java | 22,484 | 2.42% |
+| JavaScript | 15,422 | 1.66% |
+| CSS | 6,540 | 0.71% |
+| Shell | 5,767 | 0.62% |
+| Vue | 4,400 | 0.47% |
+| Python | 3,068 | 0.33% |
+| HTML | 1,714 | 0.18% |
 | C | 85 | 0.01% |
 | Kotlin | 54 | 0.01% |
 | C++ | 0 | 0.00% |
-| **Total** | **868,212** | **100.00%** |
+| **Total** | **927,354** | **100.00%** |
 
 > Generated automatically by `.github/workflows/profile-cards.yml`. Only file extensions mapped as source-code languages are counted; documentation and configuration files are ignored.
