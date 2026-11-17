@@ -1,73 +1,73 @@
 {
   "username": "xiaoyumuxi",
   "scope": "source-code additions in merged pull requests",
-  "merged_pull_requests": 498,
-  "total_additions": 927354,
+  "merged_pull_requests": 573,
+  "total_additions": 979788,
   "languages": [
     {
       "language": "Go",
-      "additions": 329107,
-      "percentage": 35.4888
+      "additions": 367473,
+      "percentage": 37.5054
     },
     {
       "language": "Rust",
-      "additions": 278056,
-      "percentage": 29.9838
+      "additions": 285704,
+      "percentage": 29.1598
     },
     {
       "language": "Swift",
       "additions": 237039,
-      "percentage": 25.5608
+      "percentage": 24.1929
     },
     {
       "language": "TypeScript",
-      "additions": 23618,
-      "percentage": 2.5468
+      "additions": 23654,
+      "percentage": 2.4142
     },
     {
       "language": "Java",
-      "additions": 22484,
-      "percentage": 2.4245
+      "additions": 22502,
+      "percentage": 2.2966
     },
     {
       "language": "JavaScript",
-      "additions": 15422,
-      "percentage": 1.663
+      "additions": 18653,
+      "percentage": 1.9038
     },
     {
       "language": "CSS",
-      "additions": 6540,
-      "percentage": 0.7052
+      "additions": 8837,
+      "percentage": 0.9019
     },
     {
       "language": "Shell",
-      "additions": 5767,
-      "percentage": 0.6219
+      "additions": 6230,
+      "percentage": 0.6359
     },
     {
       "language": "Vue",
       "additions": 4400,
-      "percentage": 0.4745
+      "percentage": 0.4491
     },
     {
       "language": "Python",
       "additions": 3068,
-      "percentage": 0.3308
+      "percentage": 0.3131
     },
     {
       "language": "HTML",
-      "additions": 1714,
-      "percentage": 0.1848
+      "additions": 2089,
+      "percentage": 0.2132
     },
     {
       "language": "C",
       "additions": 85,
-      "percentage": 0.0092
+      "percentage": 0.0087
     },
     {
       "language": "Kotlin",
       "additions": 54,
-      "percentage": 0.0058
+      "percentage": 0.0055
     },
     {
       "language": "C++",
