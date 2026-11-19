@@ -1,83 +1,83 @@
 {
   "username": "xiaoyumuxi",
   "scope": "source-code additions in merged pull requests",
-  "merged_pull_requests": 615,
-  "total_additions": 1013113,
+  "merged_pull_requests": 640,
+  "total_additions": 1051681,
   "languages": [
     {
       "language": "Go",
-      "additions": 389681,
-      "percentage": 38.4637
+      "additions": 416869,
+      "percentage": 39.6384
     },
     {
       "language": "Rust",
-      "additions": 296343,
-      "percentage": 29.2507
+      "additions": 304413,
+      "percentage": 28.9454
     },
     {
       "language": "Swift",
       "additions": 237062,
-      "percentage": 23.3994
+      "percentage": 22.5412
     },
     {
       "language": "TypeScript",
-      "additions": 23654,
-      "percentage": 2.3348
+      "additions": 23825,
+      "percentage": 2.2654
     },
     {
       "language": "Java",
-      "additions": 22502,
-      "percentage": 2.2211
+      "additions": 23085,
+      "percentage": 2.1951
     },
     {
       "language": "JavaScript",
-      "additions": 18653,
-      "percentage": 1.8412
+      "additions": 18696,
+      "percentage": 1.7777
     },
     {
       "language": "CSS",
-      "additions": 8837,
-      "percentage": 0.8723
+      "additions": 8840,
+      "percentage": 0.8406
     },
     {
       "language": "Shell",
-      "additions": 6362,
-      "percentage": 0.628
+      "additions": 6422,
+      "percentage": 0.6106
+    },
+    {
+      "language": "HTML",
+      "additions": 4540,
+      "percentage": 0.4317
     },
     {
       "language": "Vue",
       "additions": 4400,
-      "percentage": 0.4343
+      "percentage": 0.4184
     },
     {
       "language": "Python",
       "additions": 3086,
-      "percentage": 0.3046
-    },
-    {
-      "language": "HTML",
-      "additions": 2090,
-      "percentage": 0.2063
+      "percentage": 0.2934
     },
     {
       "language": "C",
       "additions": 317,
-      "percentage": 0.0313
+      "percentage": 0.0301
     },
     {
       "language": "Kotlin",
       "additions": 79,
-      "percentage": 0.0078
+      "percentage": 0.0075
     },
     {
       "language": "C#",
       "additions": 27,
-      "percentage": 0.0027
+      "percentage": 0.0026
     },
     {
       "language": "Lua",
       "additions": 20,
-      "percentage": 0.002
+      "percentage": 0.0019
     },
     {
       "language": "C++",
