@@ -1,78 +1,78 @@
 {
   "username": "xiaoyumuxi",
   "scope": "source-code additions in merged pull requests",
-  "merged_pull_requests": 777,
-  "total_additions": 1220751,
+  "merged_pull_requests": 809,
+  "total_additions": 1266710,
   "languages": [
     {
       "language": "Go",
-      "additions": 543704,
-      "percentage": 44.5385
+      "additions": 581115,
+      "percentage": 45.8759
     },
     {
       "language": "Rust",
-      "additions": 346907,
-      "percentage": 28.4175
+      "additions": 352588,
+      "percentage": 27.8349
     },
     {
       "language": "Swift",
-      "additions": 237062,
-      "percentage": 19.4194
+      "additions": 239604,
+      "percentage": 18.9155
     },
     {
       "language": "TypeScript",
-      "additions": 22989,
-      "percentage": 1.8832
+      "additions": 23246,
+      "percentage": 1.8351
     },
     {
       "language": "Java",
       "additions": 21292,
-      "percentage": 1.7442
+      "percentage": 1.6809
     },
     {
       "language": "JavaScript",
       "additions": 18696,
-      "percentage": 1.5315
+      "percentage": 1.4759
     },
     {
       "language": "CSS",
-      "additions": 8889,
-      "percentage": 0.7282
+      "additions": 8924,
+      "percentage": 0.7045
     },
     {
       "language": "Shell",
-      "additions": 7354,
-      "percentage": 0.6024
+      "additions": 7380,
+      "percentage": 0.5826
     },
     {
       "language": "HTML",
       "additions": 5538,
-      "percentage": 0.4537
+      "percentage": 0.4372
     },
     {
       "language": "Vue",
       "additions": 4400,
-      "percentage": 0.3604
+      "percentage": 0.3474
     },
     {
       "language": "Python",
-      "additions": 3156,
-      "percentage": 0.2585
+      "additions": 3163,
+      "percentage": 0.2497
     },
     {
       "language": "C",
       "additions": 638,
-      "percentage": 0.0523
+      "percentage": 0.0504
     },
     {
       "language": "Kotlin",
       "additions": 79,
-      "percentage": 0.0065
+      "percentage": 0.0062
     },
     {
       "language": "C#",
       "additions": 27,
-      "percentage": 0.0022
+      "percentage": 0.0021
     },
     {
       "language": "Lua",
