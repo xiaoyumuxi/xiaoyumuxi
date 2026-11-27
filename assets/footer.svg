@@ -1,0 +1,42 @@
+<svg width="1200" height="86" viewBox="0 0 1200 86" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Footer wave">
+  <defs>
+    <linearGradient id="footer-bg" x1="0" y1="0" x2="1200" y2="86" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0D162B"/>
+      <stop offset="100%" stop-color="#162347"/>
+    </linearGradient>
+    <linearGradient id="wave-1" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0.38"/>
+      <stop offset="50%" stop-color="#58A6FF" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#A78BFA" stop-opacity="0.38"/>
+    </linearGradient>
+    <linearGradient id="wave-2" x1="1200" y1="0" x2="0" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0.22"/>
+      <stop offset="50%" stop-color="#58A6FF" stop-opacity="0.26"/>
+      <stop offset="100%" stop-color="#A78BFA" stop-opacity="0.22"/>
+    </linearGradient>
+    <clipPath id="footer-clip">
+      <rect width="1200" height="86" rx="16"/>
+    </clipPath>
+    <style>
+      @keyframes waveShift {
+        0%, 100% { transform: translateX(0px); }
+        50% { transform: translateX(-28px); }
+      }
+      @keyframes waveShiftAlt {
+        0%, 100% { transform: translateX(0px); }
+        50% { transform: translateX(28px); }
+      }
+      .w1 { animation: waveShift 8s ease-in-out infinite; }
+      .w2 { animation: waveShiftAlt 11s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <g clip-path="url(#footer-clip)">
+    <rect width="1200" height="86" fill="url(#footer-bg)"/>
+    <path class="w2" d="M-40 54 C 180 20, 420 82, 640 48 C 860 14, 1040 74, 1260 40 L 1260 96 L -40 96 Z" fill="url(#wave-2)"/>
+    <path class="w1" d="M-40 60 C 200 84, 420 26, 660 56 C 900 86, 1060 30, 1260 54 L 1260 96 L -40 96 Z" fill="url(#wave-1)"/>
+    <text x="600" y="47" text-anchor="middle" fill="#CBD5E1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" letter-spacing="1.2">SHIP FAST · STAY NATIVE · BUILD IN PUBLIC</text>
+    <rect x="1" y="1" width="1198" height="84" rx="15" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1.5"/>
+  </g>
+</svg>
